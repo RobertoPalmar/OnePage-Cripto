@@ -1,0 +1,38 @@
+:root {
+  font-family: "Oxygen";
+  font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen";
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: none;
+}
+
+@font-face {
+  font-family: "Russo One";
+  src: url("../resource/fonts/RussoOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Oxygen";
+  src: url("../resource/fonts/Oxygen-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Oxygen";
+  src: url("../resource/fonts/Oxygen-Light.ttf");
+  font-weight: light;
+}/*# sourceMappingURL=complements.css.map */

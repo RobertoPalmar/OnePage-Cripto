@@ -1,0 +1,346 @@
+
+@import 'complements';
+
+.Nav{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: $white;
+  box-shadow: 0 0 .5rem #bbb;
+  padding: .5rem 1rem;
+
+  &__Logo{
+    width: 8rem;
+  }
+
+  &__List{
+    display: flex;
+    list-style: none;
+    height: 3rem;
+  }
+
+  &__Item{
+    margin: 0 .5rem;
+  }
+
+  &__Link{
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+    padding: .5rem .75rem;
+    transition: border .2s;
+
+    &:hover{
+      border-bottom: .2rem solid $yellow;
+    }
+
+  }
+
+  &__Button{
+    @include Button;
+  }
+
+}
+
+.Front{
+  height: auto;
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 0 4rem;
+
+  &__Divisor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 32rem;
+  }
+
+  &__Img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__Img.V{
+    margin: 2rem;
+    width: calc(100% - 10rem);
+    height: calc(100% - 4rem);
+    object-fit: cover;
+    box-shadow: 0 0 .5rem #bbb;
+  }
+
+  &__Title{
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 1rem 0;
+  }
+  
+  &__Text{
+    font-size: 1.6rem;
+  }
+
+  &__Button{
+    @include Button;
+    margin: 1.5rem 0;
+  }
+
+  &__Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__Highlight{
+    background-color: $yellow;
+    padding: 0 .5rem;
+  }
+
+}
+
+.Right{align-items: flex-end; text-align: end;}
+.Left{align-items: flex-start; text-align: start;}
+
+.White{color: $white}
+
+.Section{
+  margin: 1.5rem 0;
+  // height: 46rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__Divisor{
+    display: grid;
+    grid-auto-rows: 35rem;
+    grid-gap: 2rem;
+
+    &.C2{grid-template-columns: repeat(2,40vw);}
+    &.C1{grid-template-columns: 80vw}
+  }
+
+  &__Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 0 .5rem #bbb;
+
+  }
+
+  &__Description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  &__Title{
+    font-size: 2.8rem;
+    margin: 2rem 0;
+  }
+
+  &__Subtitle{
+    font-size: 2.2rem;
+    margin: .5rem 0;
+    text-align: center;
+  }
+
+  &__Text{
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  &__Img{
+    width: 100%;
+    height: 53%;
+    object-fit: cover;
+  
+  }
+
+  &__Button{
+    @include Button;
+    margin: 1.5rem 0; 
+  }
+
+  &__Table{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 3rem;
+    grid-gap: .8rem;
+    width: 45rem;
+  }
+
+  &.Especial{
+    background-image: url("../resource/svg/Background Cripto.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    height: 44rem;
+  }
+ 
+}
+
+.Table{
+
+  &__Row{
+    display: grid;
+    grid-template-columns: 2rem 3rem 8rem 5rem 8rem 5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: $white-lg;
+    box-shadow: 0 0 .5rem #bbb;
+
+    &:hover{
+      background-color: white;
+    }
+
+    & *{
+      padding: 0 .5rem
+    }
+  }
+
+  &__Text{
+    font-size: 1.1rem;
+  
+    &.Grey{
+      color: $grey;
+    }
+
+  }
+
+  &__Title{
+    font-size: 1.2rem;
+  }
+
+  &__Icon{
+    width: 3rem;
+  }
+
+}
+
+.Form{
+  display: flex;
+  flex-direction: column;
+ 
+  &__Button{
+    @include Button;
+    margin: 1.5rem 0;
+  }
+
+  &__Label{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: .1rem 0;
+    width: 100%;
+  }
+
+  &__Input{
+    font-size: 1rem;
+    font-weight: bold;
+    border: .15rem solid $orange;
+    margin: .1rem 0;
+    padding: .5rem;
+    width: 25rem;
+
+    &:hover, &:focus, &:active {
+      border: .15rem solid $yellow;
+      outline: none;
+    }
+  }
+
+}
+
+.Wallet{
+  display: flex;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0007;
+  pointer-events: none;
+  opacity: 0; 
+  transition: opacity .5s;
+
+  &:target{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__Content{
+    background-color: $white;
+    margin: auto;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    box-shadow: 0 0 .5rem #bbb;
+  }
+
+  &__Title{
+    margin: .5rem 0 1rem;
+    font-size: 2rem;
+  }
+
+  &__Row{
+    @extend .Table__Row;
+    margin: .5rem;
+    padding: .5rem;
+  }
+
+  &__Button{
+    @include Button;
+    margin-top: 1rem;
+  }
+
+}
+
+.Footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  background-color: $orange;
+  box-shadow: 0 -.1rem .5rem #bbb;
+
+  &__Title{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__Subtitle{
+    font-size: 1rem;
+  }
+
+}
+
+.Ancla{
+  position: relative;
+  top: -4rem;
+}
+
+hr{
+  height: 0.5rem;
+  background-color: $yellow;
+  border: none;
+  width: 83%;
+  margin: 4rem auto 0;
+
+}

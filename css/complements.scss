@@ -1,0 +1,74 @@
+$orange : #f88e05;
+$yellow: #f8bc05;
+$white: #fefefe;
+$white-lg : rgba(255, 255, 255, 0.925);
+$grey: #333;
+
+:root {
+  font-family: 'Oxygen';
+  font-weight: normal;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+html * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Oxygen';
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: none;
+}
+
+
+@mixin Button {
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: .5rem .75rem;
+  transition: transform .2s;
+
+  &.Light {
+    color: $orange;
+    background-color: white;
+    border: .15rem solid $orange;
+  }
+
+  &.Cover {
+    color: $white;
+    background-color: $orange;
+    border: .15rem solid $orange;
+  }
+
+  &.Cover:hover,
+  &.Light:hover {
+    transform: translateY(-.5rem);
+  }
+
+}
+
+@font-face {
+  font-family: 'Russo One';
+  src: url('../resource/fonts/RussoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url('../resource/fonts/Oxygen-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url('../resource/fonts/Oxygen-Light.ttf');
+  font-weight: light;
+}

@@ -1,0 +1,429 @@
+:root {
+  font-family: "Oxygen";
+  font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen";
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: none;
+}
+
+@font-face {
+  font-family: "Russo One";
+  src: url("../resource/fonts/RussoOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Oxygen";
+  src: url("../resource/fonts/Oxygen-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Oxygen";
+  src: url("../resource/fonts/Oxygen-Light.ttf");
+  font-weight: light;
+}
+.Nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #fefefe;
+  box-shadow: 0 0 0.5rem #bbb;
+  padding: 0.5rem 1rem;
+}
+.Nav__Logo {
+  width: 8rem;
+}
+.Nav__List {
+  display: flex;
+  list-style: none;
+  height: 3rem;
+}
+.Nav__Item {
+  margin: 0 0.5rem;
+}
+.Nav__Link {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: black;
+  padding: 0.5rem 0.75rem;
+  transition: border 0.2s;
+}
+.Nav__Link:hover {
+  border-bottom: 0.2rem solid #f8bc05;
+}
+.Nav__Button {
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem;
+  transition: transform 0.2s;
+}
+.Nav__Button.Light {
+  color: #f88e05;
+  background-color: white;
+  border: 0.15rem solid #f88e05;
+}
+.Nav__Button.Cover {
+  color: #fefefe;
+  background-color: #f88e05;
+  border: 0.15rem solid #f88e05;
+}
+.Nav__Button.Cover:hover, .Nav__Button.Light:hover {
+  transform: translateY(-0.5rem);
+}
+
+.Front {
+  height: auto;
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 0 4rem;
+}
+.Front__Divisor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 32rem;
+}
+.Front__Img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.Front__Img.V {
+  margin: 2rem;
+  width: calc(100% - 10rem);
+  height: calc(100% - 4rem);
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 0 0.5rem #bbb;
+}
+.Front__Title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 1rem 0;
+}
+.Front__Text {
+  font-size: 1.6rem;
+}
+.Front__Button {
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem;
+  transition: transform 0.2s;
+  margin: 1.5rem 0;
+}
+.Front__Button.Light {
+  color: #f88e05;
+  background-color: white;
+  border: 0.15rem solid #f88e05;
+}
+.Front__Button.Cover {
+  color: #fefefe;
+  background-color: #f88e05;
+  border: 0.15rem solid #f88e05;
+}
+.Front__Button.Cover:hover, .Front__Button.Light:hover {
+  transform: translateY(-0.5rem);
+}
+.Front__Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Front__Highlight {
+  background-color: #f8bc05;
+  padding: 0 0.5rem;
+}
+
+.Right {
+  align-items: flex-end;
+  text-align: end;
+}
+
+.Left {
+  align-items: flex-start;
+  text-align: start;
+}
+
+.White {
+  color: #fefefe;
+}
+
+.Section {
+  margin: 1.5rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Section__Divisor {
+  display: grid;
+  grid-auto-rows: 35rem;
+  grid-gap: 2rem;
+}
+.Section__Divisor.C2 {
+  grid-template-columns: repeat(2, 40vw);
+}
+.Section__Divisor.C1 {
+  grid-template-columns: 80vw;
+}
+.Section__Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 0 0.5rem #bbb;
+}
+.Section__Description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+.Section__Title {
+  font-size: 2.8rem;
+  margin: 2rem 0;
+}
+.Section__Subtitle {
+  font-size: 2.2rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.Section__Text {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.Section__Img {
+  width: 100%;
+  height: 53%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Section__Button {
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem;
+  transition: transform 0.2s;
+  margin: 1.5rem 0;
+}
+.Section__Button.Light {
+  color: #f88e05;
+  background-color: white;
+  border: 0.15rem solid #f88e05;
+}
+.Section__Button.Cover {
+  color: #fefefe;
+  background-color: #f88e05;
+  border: 0.15rem solid #f88e05;
+}
+.Section__Button.Cover:hover, .Section__Button.Light:hover {
+  transform: translateY(-0.5rem);
+}
+.Section__Table {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 3rem;
+  grid-gap: 0.8rem;
+  width: 45rem;
+}
+.Section.Especial {
+  background-image: url("../resource/svg/Background Cripto.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  height: 44rem;
+}
+
+.Table__Row, .Wallet__Row {
+  display: grid;
+  grid-template-columns: 2rem 3rem 8rem 5rem 8rem 5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.925);
+  box-shadow: 0 0 0.5rem #bbb;
+}
+.Table__Row:hover, .Wallet__Row:hover {
+  background-color: white;
+}
+.Table__Row *, .Wallet__Row * {
+  padding: 0 0.5rem;
+}
+.Table__Text {
+  font-size: 1.1rem;
+}
+.Table__Text.Grey {
+  color: #333;
+}
+.Table__Title {
+  font-size: 1.2rem;
+}
+.Table__Icon {
+  width: 3rem;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+}
+.Form__Button {
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem;
+  transition: transform 0.2s;
+  margin: 1.5rem 0;
+}
+.Form__Button.Light {
+  color: #f88e05;
+  background-color: white;
+  border: 0.15rem solid #f88e05;
+}
+.Form__Button.Cover {
+  color: #fefefe;
+  background-color: #f88e05;
+  border: 0.15rem solid #f88e05;
+}
+.Form__Button.Cover:hover, .Form__Button.Light:hover {
+  transform: translateY(-0.5rem);
+}
+.Form__Label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0.1rem 0;
+  width: 100%;
+}
+.Form__Input {
+  font-size: 1rem;
+  font-weight: bold;
+  border: 0.15rem solid #f88e05;
+  margin: 0.1rem 0;
+  padding: 0.5rem;
+  width: 25rem;
+}
+.Form__Input:hover, .Form__Input:focus, .Form__Input:active {
+  border: 0.15rem solid #f8bc05;
+  outline: none;
+}
+
+.Wallet {
+  display: flex;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4666666667);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.Wallet:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.Wallet__Content {
+  background-color: #fefefe;
+  margin: auto;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  box-shadow: 0 0 0.5rem #bbb;
+}
+.Wallet__Title {
+  margin: 0.5rem 0 1rem;
+  font-size: 2rem;
+}
+.Wallet__Row {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.Wallet__Button {
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem;
+  transition: transform 0.2s;
+  margin-top: 1rem;
+}
+.Wallet__Button.Light {
+  color: #f88e05;
+  background-color: white;
+  border: 0.15rem solid #f88e05;
+}
+.Wallet__Button.Cover {
+  color: #fefefe;
+  background-color: #f88e05;
+  border: 0.15rem solid #f88e05;
+}
+.Wallet__Button.Cover:hover, .Wallet__Button.Light:hover {
+  transform: translateY(-0.5rem);
+}
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  background-color: #f88e05;
+  box-shadow: 0 -0.1rem 0.5rem #bbb;
+}
+.Footer__Title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.Footer__Subtitle {
+  font-size: 1rem;
+}
+
+.Ancla {
+  position: relative;
+  top: -4rem;
+}
+
+hr {
+  height: 0.5rem;
+  background-color: #f8bc05;
+  border: none;
+  width: 83%;
+  margin: 4rem auto 0;
+}/*# sourceMappingURL=style.css.map */
